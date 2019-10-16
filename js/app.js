@@ -34,6 +34,7 @@ tl.from(".wheel-1", 3, {
     .set(".wheel-2", {
         clearProps: "all"
     });
+    
 
 // const logo = document.querySelectorAll(".man .man-body");
 // console.log(logo);
