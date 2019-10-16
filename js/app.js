@@ -1,6 +1,5 @@
 const tl = new TimelineMax();
 
-
 tl.from(".wheel-1", 3, {
     opacity: 0,
     top: "100%",
@@ -28,10 +27,16 @@ tl.from(".wheel-1", 3, {
             ease: Expo.easeInOut
         },
         "-=1"
-    );
+    )
+    .set(".wheel-1", {
+        clearProps: "all"
+    })
+    .set(".wheel-2", {
+        clearProps: "all"
+    });
 
-const logo = document.querySelectorAll(".man .man-body");
-console.log(logo);
-for (let i = 0; i < logo.length; i++) {
-    console.log(`letter ${i} is ${logo[i].getTotalLength()}`);
-}
+// const logo = document.querySelectorAll(".man .man-body");
+// console.log(logo);
+// for (let i = 0; i < logo.length; i++) {
+//     console.log(`letter ${i} is ${logo[i].getTotalLength()}`);
+// }
