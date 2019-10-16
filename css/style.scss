@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bicycle {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .wheel {
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        transform: translate(-50%, -50%);
+        width: 160px;
+        height: 160px;
+
+        animation: wheel 4s linear infinite;
+
+        svg {
+            width: 100%;
+        }
+
+
+    }
+
+    .wheel-1 {
+        left: 5%;
+        // animation: slideToRight 3s cubic-bezier(0.19,1,0.22,1);
+    }
+
+    .wheel-2 {
+        right: 5%;
+    }
+
+    .man {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 195px;
+
+        svg {
+            width: 100%;
+        }
+
+        .man-head,.man-body{
+            animation: animate 3s ease forwards 4s,fillColor 3s ease-in-out forwards 6s;
+        }
+        .man-head{
+            fill: transparent;
+            stroke-dasharray: 72;
+            stroke-dashoffset: 72;
+        }
+        .man-body{
+            fill: transparent;
+            stroke-dasharray: 390.10;
+            stroke-dashoffset: 390.10;
+        }
+    }
+}
+
+@keyframes wheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes animate{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fillColor{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill:#f56;
+        stroke-width: 0;
+    }
+}

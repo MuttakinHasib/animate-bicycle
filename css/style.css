@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bicycle {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.bicycle .wheel {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  -webkit-animation: wheel 4s linear infinite;
+          animation: wheel 4s linear infinite;
+}
+
+.bicycle .wheel svg {
+  width: 100%;
+}
+
+.bicycle .wheel-1 {
+  left: 5%;
+}
+
+.bicycle .wheel-2 {
+  right: 5%;
+}
+
+.bicycle .man {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 195px;
+}
+
+.bicycle .man svg {
+  width: 100%;
+}
+
+.bicycle .man .man-head, .bicycle .man .man-body {
+  -webkit-animation: animate 3s ease forwards 4s,fillColor 3s ease-in-out forwards 6s;
+          animation: animate 3s ease forwards 4s,fillColor 3s ease-in-out forwards 6s;
+}
+
+.bicycle .man .man-head {
+  fill: transparent;
+  stroke-dasharray: 72;
+  stroke-dashoffset: 72;
+}
+
+.bicycle .man .man-body {
+  fill: transparent;
+  stroke-dasharray: 390.10;
+  stroke-dashoffset: 390.10;
+}
+
+@-webkit-keyframes wheel {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes wheel {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fillColor {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #f56;
+    stroke-width: 0;
+  }
+}
+
+@keyframes fillColor {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #f56;
+    stroke-width: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
