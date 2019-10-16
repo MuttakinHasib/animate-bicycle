@@ -16,7 +16,7 @@ tl.from(".wheel-1", 3, {
         "-=3"
     )
     .to(".wheel-1", 1, {
-        left: "37%",
+        left: "35%",
         ease: Expo.easeInOut
     })
     .to(
