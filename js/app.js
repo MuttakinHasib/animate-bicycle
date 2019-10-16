@@ -1,5 +1,6 @@
 const tl = new TimelineMax();
 
+
 tl.from(".wheel-1", 3, {
     opacity: 0,
     top: "100%",
@@ -15,15 +16,15 @@ tl.from(".wheel-1", 3, {
         },
         "-=3"
     )
-    .to(".wheel-1", 1, {
-        left: "35%",
+    .from(".wheel-1", 1, {
+        left: "5%",
         ease: Expo.easeInOut
     })
-    .to(
+    .from(
         ".wheel-2",
         1,
         {
-            left: "55%",
+            right: "5%",
             ease: Expo.easeInOut
         },
         "-=1"
